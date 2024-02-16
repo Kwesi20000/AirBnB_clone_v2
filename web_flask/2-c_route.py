@@ -3,7 +3,7 @@
 This script starts a Flask web application.
 """
 
-from flask import Flask, escape
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -30,7 +30,8 @@ def c_text(text):
     Display "C " followed by the value of the text variable.
     Replace underscore _ symbols with a space.
     """
-    return "C {}".format(escape(text.replace('_', ' ')))
+    txt = text.replace('_', ' ')
+    return "C {}".format(txt)
 
 
 if __name__ == '__main__':
